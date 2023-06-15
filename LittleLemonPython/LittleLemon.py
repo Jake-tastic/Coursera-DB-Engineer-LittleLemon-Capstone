@@ -1,8 +1,6 @@
 #establishing connection to the database
 import mysql.connector as connection
-
 connection = connection.connect(username = "root", password = "", database = "")
-
 cursor = connection.cursor()
 
 #diplaying all tables within the database
