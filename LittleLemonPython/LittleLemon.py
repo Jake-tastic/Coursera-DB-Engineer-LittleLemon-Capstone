@@ -1,12 +1,12 @@
 #establishing connection to the database
 import mysql.connector as connection
-connection = connection.connect(username = "root", password = "Corntruck85!", database = "littlelemondb")
+connection = connection.connect(username = "user", password = "password", database = "database")
 cursor = connection.cursor()
 
 #diplaying all tables within the database
-#cursor.execute("SHOW TABLES")
-#for table in cursor:
-#    print(table)
+cursor.execute("SHOW TABLES")
+for table in cursor:
+    print(table)
 
 #query to find customer and order info on orders over $60
 total_cost = """
